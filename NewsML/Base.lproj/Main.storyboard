@@ -20,7 +20,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="262" id="N21-dJ-Jir">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ArticleCell" rowHeight="262" id="N21-dJ-Jir" customClass="ArticleCell" customModule="NewsML" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="262"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="N21-dJ-Jir" id="qMN-x9-mTf">
@@ -39,7 +39,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🏀 Sports" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eCQ-in-S5d">
-                                            <rect key="frame" x="21" y="226" width="333" height="25"/>
+                                            <rect key="frame" x="21" y="236" width="333" height="25"/>
                                             <color key="backgroundColor" red="0.45085787770000002" green="0.98829740290000001" blue="0.83763033149999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="25" id="8Sg-kR-kGy"/>
@@ -48,8 +48,8 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qB1-JC-j7l">
-                                            <rect key="frame" x="21" y="61" width="333" height="165"/>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultImage" translatesAutoresizingMaskIntoConstraints="NO" id="qB1-JC-j7l">
+                                            <rect key="frame" x="21" y="61" width="333" height="175"/>
                                         </imageView>
                                     </subviews>
                                     <constraints>
@@ -57,7 +57,7 @@
                                         <constraint firstItem="qB1-JC-j7l" firstAttribute="leading" secondItem="qMN-x9-mTf" secondAttribute="leadingMargin" constant="5" id="2Zn-Tw-MP3"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="MIv-Nu-fpf" secondAttribute="trailing" constant="5" id="6pX-gF-INF"/>
                                         <constraint firstItem="MIv-Nu-fpf" firstAttribute="leading" secondItem="qMN-x9-mTf" secondAttribute="leadingMargin" constant="5" id="97X-7T-lwd"/>
-                                        <constraint firstItem="eCQ-in-S5d" firstAttribute="bottom" secondItem="qMN-x9-mTf" secondAttribute="bottomMargin" id="AJE-mi-Hyz"/>
+                                        <constraint firstItem="eCQ-in-S5d" firstAttribute="bottom" secondItem="qMN-x9-mTf" secondAttribute="bottomMargin" constant="10" id="AJE-mi-Hyz"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="qB1-JC-j7l" secondAttribute="trailing" constant="5" id="Hvh-8i-ocy"/>
                                         <constraint firstItem="MIv-Nu-fpf" firstAttribute="leading" secondItem="qMN-x9-mTf" secondAttribute="leadingMargin" constant="5" id="NkY-HO-z4v"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="MIv-Nu-fpf" secondAttribute="trailing" constant="5" id="PEt-nB-Z9H"/>
@@ -67,6 +67,11 @@
                                         <constraint firstItem="eCQ-in-S5d" firstAttribute="top" secondItem="qB1-JC-j7l" secondAttribute="bottom" id="nzT-uD-VNW"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="articleImageView" destination="qB1-JC-j7l" id="pXw-61-Bcs"/>
+                                    <outlet property="categoryLabel" destination="eCQ-in-S5d" id="xLK-NR-qqV"/>
+                                    <outlet property="titleLabel" destination="MIv-Nu-fpf" id="pGx-JW-qFi"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -129,4 +134,7 @@
             <point key="canvasLocation" x="-567" y="128"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="defaultImage" width="512" height="512"/>
+    </resources>
 </document>
