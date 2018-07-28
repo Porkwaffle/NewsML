@@ -7,5 +7,5 @@ target 'NewsML' do
 
   # Pods for NewsML
 pod 'Alamofire', '~> 4.7'
-
+pod 'DocumentClassifier', '1.0.0'
 end
