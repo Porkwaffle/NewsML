@@ -87,8 +87,8 @@
 				BFF219F7210CCAF000626E32 /* ArticleWebViewController.swift */,
 				BFF219F3210CC90000626E32 /* NewsHelper.swift */,
 				BF28D966210CC1FA00F15F62 /* Main.storyboard */,
-				BF28D969210CC1FB00F15F62 /* Assets.xcassets */,
 				BF28D96B210CC1FB00F15F62 /* LaunchScreen.storyboard */,
+				BF28D969210CC1FB00F15F62 /* Assets.xcassets */,
 				BF28D96E210CC1FB00F15F62 /* Info.plist */,
 			);
 			path = NewsML;
